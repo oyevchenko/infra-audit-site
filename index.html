@@ -2,713 +2,357 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>[NAME] · Principal-led infrastructure audit, every fix priced</title>
   <meta name="description" content="Kubernetes, GitOps, Terraform and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
+  <link rel="preload" href="fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-sans-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header class="site-header" id="top">
-    <div class="container header-inner">
+  <header class="site-header">
+    <div class="wrap header-inner">
       <a href="#top" class="wordmark"><span data-name>[NAME]</span></a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <nav class="site-nav" aria-label="Primary">
         <a href="#report">Report</a>
         <a href="#scope">Scope</a>
         <a href="#pricing">Pricing</a>
         <a href="#guarantees">Guarantees</a>
         <a href="#access">Access &amp; data</a>
       </nav>
-      <a href="#book" class="btn-primary btn-small" data-placeholder="booking-link">Book a 20-minute call</a>
+      <a href="#book" class="btn btn-sm" data-placeholder="booking-link">Book a 20-minute call</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- 1. Hero (#top) -->
-    <section class="section hero-section" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 01</span>
-          <span class="sec-label">EXECUTIVE BRIEFING</span>
+
+    <!-- 1 · Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-h">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-h">An infrastructure audit where every finding has a price.</h1>
+          <p class="lead">A Principal engineer reviews your platform from Git commit to database replica. Every finding gets a priority, a fix and a fixed price. Some get "not worth fixing", with the reason.</p>
+          <div class="cta-row">
+            <a href="#book" class="btn" data-placeholder="booking-link">Book a 20-minute call</a>
+            <a href="#report" class="text-link">See a sample report</a>
+          </div>
+          <p class="micro">20 minutes with Oleksii and Volodymyr. We listen to your setup, suggest a tier and send a fixed quote. No pitch deck.</p>
+          <dl class="hero-prices">
+            <div><dt>Starter</dt><dd><span class="price">from €2,500</span></dd></div>
+            <div><dt>Growth</dt><dd><span class="price">from €4,000</span></dd></div>
+            <div><dt>Delivery</dt><dd>Fixed date in writing</dd></div>
+          </dl>
         </div>
-        <div class="grid-12 hero-grid">
-          <div class="col-7 hero-copy">
-            <p class="eyebrow">Scanners list problems. We price the ones worth fixing.</p>
-            <h1 id="hero-heading">An infrastructure audit where every finding has a price.</h1>
-            <p class="hero-sub">A Principal engineer reviews your platform from Git commit to database replica. Every finding gets a priority, a fix and a fixed price. Some get "not worth fixing", with the reason.</p>
-            
-            <div class="cta-group">
-              <div class="cta-primary-wrap">
-                <a href="#book" class="btn-primary" data-placeholder="booking-link">Book a 20-minute call</a>
-                <a href="#report" class="link-secondary">See a sample report ↓</a>
-              </div>
-              <p class="microcopy">20 minutes with Oleksii and Volodymyr. We listen to your setup, suggest a tier and send a fixed quote. No pitch deck.</p>
+
+        <figure class="hero-sheet" aria-label="Illustrative finding from a report">
+          <div class="sheet">
+            <div class="finding">
+              <p class="finding-head"><span class="fid">F-07</span> <span class="sev sev-p0">P0</span> <span class="finding-title">Finding title</span></p>
+              <dl class="finding-fields">
+                <div><dt>Evidence</dt><dd>What we saw on your cluster</dd></div>
+                <div><dt>Fix</dt><dd>What to change, step by step</dd></div>
+                <div><dt>Your team</dt><dd><span class="num">[x] days</span></dd></div>
+                <div><dt>With us</dt><dd><span class="price">€[x] fixed</span></dd></div>
+                <div><dt>Maps to</dt><dd>DORA Art. 12 / NIS2 Art. 21 [if applicable]</dd></div>
+              </dl>
             </div>
-
-            <p class="proof-line">Starter from <span class="price-val">€2,500</span> · Growth from <span class="price-val">€4,000</span> · Fixed date in writing</p>
+            <ol class="notes">
+              <li>Validated on your cluster</li>
+              <li>Fixed price, or days for your team</li>
+              <li>Regulatory article mapped</li>
+            </ol>
           </div>
+          <figcaption>Fig. 1 · Example layout of one finding.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-          <div class="col-5 hero-specimen">
-            <figure class="specimen-figure">
-              <div class="report-sheet report-preview" role="region" aria-label="Illustrative finding preview">
-                <div class="sheet-header">
-                  <span class="mono-id">EXTRACT // F-07</span>
-                  <span class="mono-meta">SPECIMEN</span>
-                </div>
-                <div class="annotated-row">
-                  <div class="finding-card">
-                    <div class="finding-top">
-                      <span class="mono-id">F-07</span>
-                      <span class="sev-badge sev-p0">P0</span>
-                      <span class="finding-title-dummy">[Finding title]</span>
-                    </div>
-                    <div class="finding-details-dummy">
-                      <div class="dummy-line"><span class="dummy-key">Evidence:</span> <span>[Evidence]</span></div>
-                      <div class="dummy-line"><span class="dummy-key">Fix:</span> <span>[Fix]</span></div>
-                    </div>
-                    <div class="finding-metrics">
-                      <span class="metric-item">Effort for your team: <span class="mono-val">[x] days</span></span>
-                      <span class="metric-item">Fixed price: <span class="price-val">€[x]</span></span>
-                    </div>
-                    <div class="finding-reg">
-                      Maps to: DORA Art. 12 / NIS2 Art. 21 [if applicable]
-                    </div>
-                  </div>
-                  <div class="margin-notes">
-                    <div class="margin-note"><span class="note-arrow" aria-hidden="true">←</span><span class="note-num">1.</span> Validated on your cluster</div>
-                    <div class="margin-note"><span class="note-arrow" aria-hidden="true">←</span><span class="note-num">2.</span> Fixed price or DIY days</div>
-                    <div class="margin-note"><span class="note-arrow" aria-hidden="true">←</span><span class="note-num">3.</span> Regulatory article mapped</div>
-                  </div>
-                </div>
-              </div>
-              <figcaption class="fig-caption">Fig. 1 — Illustrative finding. Layout only.</figcaption>
-            </figure>
-          </div>
+    <!-- 2 · Problem + triggers -->
+    <section class="band" id="problem" aria-labelledby="problem-h">
+      <div class="wrap">
+        <div class="split-statement">
+          <h2 id="problem-h">A scanner gives you a list. You need a decision.</h2>
+          <p class="body-lg">Trivy and Kubescape are free, and we use them too. They report every misconfiguration with the same urgency. They don't know your architecture, your budget or which risks you've already accepted. Our Principal engineer reads the output, checks each finding on your setup and keeps the ones worth money.</p>
+        </div>
+
+        <div class="triggers" id="triggers">
+          <h3>Call us if one of these is on your desk</h3>
+          <ul class="trigger-list">
+            <li>DORA Article 12: you need evidence of tested restores.</li>
+            <li>NIS2 / § 30 BSIG: you have to document your risk-management measures.</li>
+            <li>Your platform engineer just left, and nobody owns the cluster.</li>
+            <li>You're raising a round and expect technical due diligence.</li>
+            <li>Your team is shipping AI agents with access to production.</li>
+          </ul>
+          <p class="note">We provide technical evidence for your NIS2 and DORA documentation. Certification stays with your auditor.</p>
         </div>
       </div>
     </section>
 
-    <!-- 2. Triggers (#triggers) -->
-    <section class="section" id="triggers" aria-labelledby="triggers-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 02</span>
-          <span class="sec-label">AUDIT TRIGGERS</span>
-        </div>
-        <div class="grid-12">
-          <div class="col-4">
-            <h2 id="triggers-heading">Call us if one of these is on your desk</h2>
-          </div>
-          <div class="col-8">
-            <ul class="dossier-list">
-              <li>
-                <span class="list-index">01</span>
-                <span class="list-text">DORA Article 12: you need evidence of tested restores.</span>
-              </li>
-              <li>
-                <span class="list-index">02</span>
-                <span class="list-text">NIS2 / § 30 BSIG: you have to document your risk-management measures.</span>
-              </li>
-              <li>
-                <span class="list-index">03</span>
-                <span class="list-text">Your platform engineer just left, and nobody owns the cluster.</span>
-              </li>
-              <li>
-                <span class="list-index">04</span>
-                <span class="list-text">You're raising a round and expect technical due diligence.</span>
-              </li>
-              <li>
-                <span class="list-index">05</span>
-                <span class="list-text">Your team is shipping AI agents with access to production.</span>
-              </li>
-            </ul>
-            <p class="section-note">We provide technical evidence for your NIS2 and DORA documentation. Certification stays with your auditor.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Problem (#problem) -->
-    <section class="section" id="problem" aria-labelledby="problem-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 03</span>
-          <span class="sec-label">SIGNAL VS. NOISE</span>
-        </div>
-        <div class="grid-12">
-          <div class="col-5">
-            <h2 id="problem-heading">A scanner gives you a list. You need a decision.</h2>
-          </div>
-          <div class="col-7">
-            <p class="body-large">Trivy and Kubescape are free, and we use them too. They report every misconfiguration with the same urgency. They don't know your architecture, your budget or which risks you've already accepted. Our Principal engineer reads the output, checks each finding on your setup and keeps the ones worth money.</p>
-            
-            <div class="placeholder filter-ratio-box" role="region" aria-label="Placeholder for scanner filtering metrics">
-              <div class="placeholder-tag">PLACEHOLDER: numbers from the real sample report</div>
-              <div class="ratio-display">
-                <span class="mono-stat"><span class="placeholder-inline">[N]</span> raw findings</span>
-                <span class="mono-arrow" aria-hidden="true">→</span>
-                <span class="mono-stat stat-strong"><span class="placeholder-inline">[M]</span> validated</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Sample report (#report) -->
-    <section class="section" id="report" aria-labelledby="report-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 04</span>
-          <span class="sec-label">DELIVERABLE SPECIMEN</span>
-        </div>
-        <div class="section-intro">
-          <h2 id="report-heading">This is what you get</h2>
-          <p class="body-large">One page from a report, anonymised.</p>
+    <!-- 3 · Sample report (surface band) -->
+    <section class="band band-surface" id="report" aria-labelledby="report-h">
+      <div class="wrap">
+        <div class="section-head center">
+          <h2 id="report-h">This is what you get</h2>
+          <p class="body-lg">One page from a report, anonymised. Shown here as an example layout until the real sample is published.</p>
         </div>
 
-        <figure class="specimen-figure full-specimen">
-          <div class="report-sheet placeholder report-sheet-large">
-            <div class="sheet-banner">
-              <span class="placeholder-badge">PLACEHOLDER — anonymised sample report goes here</span>
-              <span class="mono-meta">DOC-REF // AUDIT-SPECIMEN-V1</span>
+        <figure class="report">
+          <div class="report-page">
+            <div class="report-top">
+              <span class="tag">Example layout</span>
+              <span class="report-meta">Infrastructure audit · Page 3 of [x]</span>
             </div>
 
-            <!-- Executive summary row: priority × effort mini-matrix -->
-            <div class="sheet-block matrix-block">
-              <div class="sheet-block-header">
-                <span class="mono-label">EXECUTIVE SUMMARY // PRIORITY × EFFORT MATRIX</span>
-              </div>
-              <div class="matrix-wrapper" tabindex="0" role="region" aria-label="Priority by effort matrix, scrollable">
-                <div class="matrix-y-label" aria-hidden="true">PRIORITY (P0–P2)</div>
-                <table class="mini-matrix" aria-label="Priority by effort matrix structure">
-                  <thead>
-                    <tr>
-                      <th scope="col">Priority \ Effort</th>
-                      <th scope="col">Low (&lt; 2 days)</th>
-                      <th scope="col">Medium (2–5 days)</th>
-                      <th scope="col">High (&gt; 5 days)</th>
-                    </tr>
-                  </thead>
+            <div class="matrix-block">
+              <p class="block-title">Executive summary: priority × effort</p>
+              <div class="matrix-scroll" tabindex="0" role="region" aria-label="Priority by effort matrix, scrollable">
+                <table class="matrix">
+                  <thead><tr><th scope="col">Priority</th><th scope="col">Low effort (&lt; 2 days)</th><th scope="col">Medium (2–5 days)</th><th scope="col">High (&gt; 5 days)</th></tr></thead>
                   <tbody>
-                    <tr>
-                      <th scope="row"><span class="sev-badge sev-p0">P0</span></th>
-                      <td class="empty-cell">[ — ]</td>
-                      <td class="empty-cell">[ F-07 ]</td>
-                      <td class="empty-cell">[ — ]</td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><span class="sev-badge sev-p1">P1</span></th>
-                      <td class="empty-cell">[ F-09 ]</td>
-                      <td class="empty-cell">[ — ]</td>
-                      <td class="empty-cell">[ — ]</td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><span class="sev-badge sev-p2">P2</span></th>
-                      <td class="empty-cell">[ F-11 ]</td>
-                      <td class="empty-cell">[ — ]</td>
-                      <td class="empty-cell">[ — ]</td>
-                    </tr>
+                    <tr><th scope="row"><span class="sev sev-p0">P0</span></th><td>·</td><td>F-07</td><td>·</td></tr>
+                    <tr><th scope="row"><span class="sev sev-p1">P1</span></th><td>F-09</td><td>·</td><td>·</td></tr>
+                    <tr><th scope="row"><span class="sev sev-p2">P2</span></th><td>F-11</td><td>·</td><td>·</td></tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-            <!-- Findings with right-hand margin annotations -->
-            <div class="sheet-findings">
-              <!-- Row 1: F-07 + Annotation 1 & 2 -->
-              <div class="annotated-row">
-                <div class="finding-card">
-                  <div class="finding-top">
-                    <span class="mono-id">Finding F-07</span>
-                    <span class="dot-sep">·</span>
-                    <span class="sev-badge sev-p0">P0</span>
-                    <span class="dot-sep">·</span>
-                    <span class="finding-price-tag">Fixed price <span class="price-val">€[x]</span></span>
-                  </div>
-                  <div class="finding-grid-dummy">
-                    <div class="dummy-field"><span class="dummy-key">Finding title:</span> <span>[Finding title]</span></div>
-                    <div class="dummy-field"><span class="dummy-key">Evidence:</span> <span>[Evidence]</span></div>
-                    <div class="dummy-field"><span class="dummy-key">Fix:</span> <span>[Fix]</span></div>
-                    <div class="dummy-field metrics-row">
-                      <span>Effort for your team: <span class="mono-val">[x] days</span></span>
-                      <span>Fixed price: <span class="price-val">€[x]</span></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="margin-notes">
-                  <div class="margin-note">
-                    <span class="note-arrow" aria-hidden="true">←</span>
-                    <span class="note-index">1.</span>
-                    <span class="note-body">Validated on your cluster by the engineer who signs the report.</span>
-                  </div>
-                  <div class="margin-note">
-                    <span class="note-arrow" aria-hidden="true">←</span>
-                    <span class="note-index">2.</span>
-                    <span class="note-body">Fixed price to fix it with us. Your team can also do it: estimate in days.</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Row 3: F-11 + Annotation 3 -->
-              <div class="annotated-row">
-                <div class="finding-card finding-skipped">
-                  <div class="finding-top">
-                    <span class="mono-id">Finding F-11</span>
-                    <span class="dot-sep">·</span>
-                    <span class="sev-badge sev-p2">P2</span>
-                    <span class="dot-sep">·</span>
-                    <span class="sev-badge sev-nwf">Not worth fixing</span>
-                    <span class="price-struck">Fixed price: €[x]</span>
-                  </div>
-                  <div class="finding-grid-dummy">
-                    <div class="dummy-field"><span class="dummy-key">Finding title:</span> <span>[Finding title]</span></div>
-                    <div class="dummy-field"><span class="dummy-key">Why:</span> <span>[reason]</span></div>
-                  </div>
-                </div>
-                <div class="margin-notes">
-                  <div class="margin-note">
-                    <span class="note-arrow" aria-hidden="true">←</span>
-                    <span class="note-index">3.</span>
-                    <span class="note-body">Not worth fixing: we explain why, so you can stop worrying about it.</span>
-                  </div>
-                </div>
-              </div>
-
-              <details class="report-more">
-                <summary>Show full page</summary>
-              <!-- Row 2: F-09 -->
-              <div class="annotated-row">
-                <div class="finding-card">
-                  <div class="finding-top">
-                    <span class="mono-id">Finding F-09</span>
-                    <span class="dot-sep">·</span>
-                    <span class="sev-badge sev-p1">P1</span>
-                    <span class="dot-sep">·</span>
-                    <span class="finding-diy-tag">Do it yourself: <span class="mono-val">~[x] days</span></span>
-                  </div>
-                  <div class="finding-grid-dummy">
-                    <div class="dummy-field"><span class="dummy-key">Finding title:</span> <span>[Finding title]</span></div>
-                    <div class="dummy-field"><span class="dummy-key">Evidence:</span> <span>[Evidence]</span></div>
-                    <div class="dummy-field"><span class="dummy-key">Fix:</span> <span>[Fix]</span></div>
-                    <div class="dummy-field metrics-row">
-                      <span>Effort for your team: <span class="mono-val">[x] days</span></span>
-                      <span>Fixed price: <span class="price-val">€[x]</span></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="margin-notes">
-                  <!-- Covered by note 2 above on desktop -->
-                </div>
-              </div>
-
-              <!-- Row 4: Regulatory mapping line + Annotation 4 -->
-              <div class="annotated-row">
-                <div class="regulatory-bar">
-                  <span class="mono-label">REGULATORY TRACEABILITY //</span>
-                  <span class="reg-text">Maps to: DORA Art. 12 / NIS2 Art. 21 [if applicable]</span>
-                </div>
-                <div class="margin-notes">
-                  <div class="margin-note">
-                    <span class="note-arrow" aria-hidden="true">←</span>
-                    <span class="note-index">4.</span>
-                    <span class="note-body">Mapped to DORA Art. 12 / NIS2 Art. 21 where it applies.</span>
-                  </div>
-                </div>
-              </div>
-              </details>
+            <div class="report-row">
+              <article class="finding">
+                <p class="finding-head"><span class="fid">F-07</span> <span class="sev sev-p0">P0</span> <span class="finding-title">Finding title</span> <span class="price">€[x] fixed</span></p>
+                <dl class="finding-fields">
+                  <div><dt>Evidence</dt><dd>What we saw on your infrastructure</dd></div>
+                  <div><dt>Fix</dt><dd>What to change, step by step</dd></div>
+                  <div><dt>Your team</dt><dd><span class="num">[x] days</span></dd></div>
+                </dl>
+              </article>
+              <ol class="notes" start="1">
+                <li>Validated on your cluster by the engineer who signs the report.</li>
+                <li>Fixed price to fix it with us. Your team can also do it: estimate in days.</li>
+              </ol>
             </div>
+
+            <div class="report-row">
+              <article class="finding finding-skip">
+                <p class="finding-head"><span class="fid">F-11</span> <span class="sev sev-p2">P2</span> <span class="finding-title">Finding title</span> <span class="sev sev-nwf">Not worth fixing</span> <s class="price-struck">€[x]</s></p>
+                <dl class="finding-fields">
+                  <div><dt>Why</dt><dd>The reason, in one or two sentences</dd></div>
+                </dl>
+              </article>
+              <ol class="notes" start="3">
+                <li>Not worth fixing: we explain why, so you can stop worrying about it.</li>
+              </ol>
+            </div>
+
+            <details class="report-more">
+              <summary>Show full page</summary>
+              <div class="report-row">
+                <article class="finding">
+                  <p class="finding-head"><span class="fid">F-09</span> <span class="sev sev-p1">P1</span> <span class="finding-title">Finding title</span> <span class="num">Do it yourself: ~[x] days</span></p>
+                  <dl class="finding-fields">
+                    <div><dt>Evidence</dt><dd>What we saw on your infrastructure</dd></div>
+                    <div><dt>Fix</dt><dd>What to change, step by step</dd></div>
+                  </dl>
+                </article>
+                <div class="notes-empty" aria-hidden="true"></div>
+              </div>
+              <div class="report-row">
+                <p class="reg-line">Maps to: DORA Art. 12 / NIS2 Art. 21 [if applicable]</p>
+                <ol class="notes" start="4">
+                  <li>Mapped to DORA Art. 12 / NIS2 Art. 21 where it applies.</li>
+                </ol>
+              </div>
+            </details>
+
+            <p class="signature">Signed: Volodymyr Shvaiko, Principal engineer <span class="sig-date">· [date]</span></p>
           </div>
-          <figcaption class="fig-caption">Fig. 2 — Report anatomy. Placeholder until the anonymised sample is published.</figcaption>
+          <figcaption>Fig. 2 · Report anatomy. Example layout until the anonymised sample is published.</figcaption>
         </figure>
 
-        <div class="cta-group report-cta-bar">
-          <div class="cta-primary-wrap">
-            <a href="#book" class="btn-primary" data-placeholder="booking-link">Book a 20-minute call</a>
-            <!-- Sample PDF link hidden until the real anonymised report exists:
-            <a href="#" class="link-secondary" data-placeholder="sample-pdf">Download the full sample (PDF)</a> -->
-          </div>
-          <p class="microcopy">20 minutes with Oleksii and Volodymyr. We listen to your setup, suggest a tier and send a fixed quote. No pitch deck.</p>
+        <div class="cta-row center">
+          <a href="#book" class="btn" data-placeholder="booking-link">Book a 20-minute call</a>
+          <!-- Sample PDF link hidden until the real anonymised report exists:
+          <a href="#" class="text-link" data-placeholder="sample-pdf">Download the full sample (PDF)</a> -->
         </div>
+        <p class="micro center">20 minutes with Oleksii and Volodymyr. We listen to your setup, suggest a tier and send a fixed quote. No pitch deck.</p>
       </div>
     </section>
 
-    <!-- 5. Scope (#scope) -->
-    <section class="section" id="scope" aria-labelledby="scope-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 05</span>
-          <span class="sec-label">AUDIT PERIMETER</span>
+    <!-- 4 · Scope -->
+    <section class="band" id="scope" aria-labelledby="scope-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="scope-h">From Git commit to database replica</h2>
+          <p class="body-lg">We follow a change through your whole platform and check what breaks on the way.</p>
         </div>
-        <div class="section-intro">
-          <h2 id="scope-heading">From Git commit to database replica</h2>
-          <p class="body-large">We follow a change through your whole platform and check what breaks on the way.</p>
-        </div>
-
-        <ol class="pipeline-track" aria-label="Infrastructure audit pipeline stages">
-          <li class="pipeline-node">
-            <span class="node-step">01</span>
-            <span class="node-name">Git &amp; Flux</span>
-            <span class="node-sub">(Flux-first, Argo CD supported)</span>
-          </li>
-          <li class="pipeline-node">
-            <span class="node-step">02</span>
-            <span class="node-name">Terraform &amp; state</span>
-          </li>
-          <li class="pipeline-node">
-            <span class="node-step">03</span>
-            <span class="node-name">Kubernetes &amp; custom operators</span>
-          </li>
-          <li class="pipeline-node">
-            <span class="node-step">04</span>
-            <span class="node-name">Secrets &amp; access</span>
-          </li>
-          <li class="pipeline-node">
-            <span class="node-step">05</span>
-            <span class="node-name">Postgres / MongoDB replication</span>
-          </li>
-          <li class="pipeline-node">
-            <span class="node-step">06</span>
-            <span class="node-name">Backups, restores, second data centre</span>
-          </li>
-          <li class="pipeline-node node-addon">
-            <span class="node-step">07</span>
-            <span class="node-name">AI agents</span>
-            <span class="node-sub">(add-on)</span>
-          </li>
+        <ol class="pipeline" aria-label="What we audit, in order">
+          <li><strong>Git &amp; Flux</strong><span>Flux-first, Argo CD supported</span></li>
+          <li><strong>Terraform &amp; state</strong></li>
+          <li><strong>Kubernetes &amp; custom operators</strong></li>
+          <li><strong>Secrets &amp; access</strong></li>
+          <li><strong>Postgres / MongoDB replication</strong></li>
+          <li><strong>Backups, restores, second data centre</strong></li>
+          <li class="addon"><strong>AI agents</strong><span>Add-on</span></li>
         </ol>
-
-        <figure class="diff-figure">
-          <div class="diff-block" role="region" aria-label="Desired versus actual state diff">
-            <div class="diff-header">
-              <span>STATE COMPARISON // ACTUAL VS. DESIRED</span>
-              <span>TARGET: DR &amp; BACKUP POLICY</span>
-            </div>
-            <pre class="diff-pre"><code><span class="diff-del">− backups in the same cloud account as production</span>
-<span class="diff-del">− restore never tested; RPO unknown</span>
-<span class="diff-add">+ backups cross-account and object-locked</span>
-<span class="diff-add">+ restore tested, RTO/RPO measured and written down</span></code></pre>
-          </div>
-          <figcaption class="fig-caption">Fig. 3 — A typical finding, illustrated.</figcaption>
+        <figure class="diff">
+          <pre><code><span class="del">− backups in the same cloud account as production</span>
+<span class="del">− restore never tested; RPO unknown</span>
+<span class="add">+ backups cross-account and object-locked</span>
+<span class="add">+ restore tested, RTO/RPO measured and written down</span></code></pre>
+          <figcaption>Fig. 3 · A typical finding, illustrated.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- 6. Who does the work (#team) -->
-    <section class="section" id="team" aria-labelledby="team-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 06</span>
-          <span class="sec-label">PRINCIPAL LED</span>
-        </div>
-        <h2 id="team-heading" class="section-heading-spaced">The engineer who signs the report is the one who did the work</h2>
-
-        <div class="grid-12 team-grid">
-          <div class="col-4">
-            <figure class="portrait-figure">
-              <div class="portrait-box placeholder" role="img" aria-label="Placeholder portrait of Volodymyr Shvaiko">
-                <span class="placeholder-tag">PLACEHOLDER // 4:5 PORTRAIT</span>
-              </div>
-              <figcaption class="fig-caption">Fig. 4 — Principal engineer</figcaption>
-            </figure>
+    <!-- 5 · Team (surface) -->
+    <section class="band band-surface" id="team" aria-labelledby="team-h">
+      <div class="wrap team-grid">
+        <figure class="portrait">
+          <div class="portrait-frame" role="img" aria-label="Portrait of Volodymyr Shvaiko (photo to be added)">
+            <span class="tag">Photo to be added</span>
           </div>
-          <div class="col-8 team-copy">
-            <p class="bio-paragraph">
-              <strong>Volodymyr Shvaiko</strong>, Staff/Principal DevOps engineer. He came to infrastructure from software development. He writes custom Kubernetes controllers and operators instead of stacking workarounds. He knows Postgres and MongoDB in depth, including complex replication across data centres. He is a FluxCD and GitOps evangelist and works spec-first, writing down the desired state before anything changes.
-            </p>
-            <p class="bio-link"><a href="https://github.com/cube13" rel="noopener">github.com/cube13</a>
-            </p>
-            <p class="bio-highlight">He joins your 20-minute call.</p>
-            <div class="oleksii-note">
-              <p>"I'm Oleksii. I handle scope, contracts and scheduling. The technical calls in your report are his."</p>
-            </div>
-          </div>
+          <figcaption>Volodymyr Shvaiko, Principal engineer</figcaption>
+        </figure>
+        <div class="team-copy">
+          <h2 id="team-h" class="h-quote">The engineer who signs the report is the one who did the work.</h2>
+          <p class="body-lg"><strong>Volodymyr Shvaiko</strong>, Staff/Principal DevOps engineer. He came to infrastructure from software development. He writes custom Kubernetes controllers and operators instead of stacking workarounds. He knows Postgres and MongoDB in depth, including complex replication across data centres. He is a FluxCD and GitOps evangelist and works spec-first, writing down the desired state before anything changes.</p>
+          <p class="team-meta"><a href="https://github.com/cube13" rel="noopener">github.com/cube13</a> · He joins your 20-minute call.</p>
+          <p class="oleksii">"I'm Oleksii. I handle scope, contracts and scheduling. The technical calls in your report are his."</p>
         </div>
       </div>
     </section>
 
-    <!-- 7. How it works (#process) -->
-    <section class="section" id="process" aria-labelledby="process-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 07</span>
-          <span class="sec-label">EXECUTION PROTOCOL</span>
+    <!-- 6 · Process + access -->
+    <section class="band" id="process" aria-labelledby="process-h">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="process-h">How it works</h2>
+          <p class="body-lg">One scoping call, read-only access for an agreed window, and a readout call when the report is ready. Everything else happens in writing.</p>
+          <ol class="steps">
+            <li><span class="step-n">1</span>Scope call, 20 min</li>
+            <li><span class="step-n">2</span>Read-only, time-boxed access</li>
+            <li><span class="step-n">3</span>Review: scanners plus Principal validation</li>
+            <li><span class="step-n">4</span>Report and readout call</li>
+          </ol>
         </div>
-        <div class="grid-12">
-          <div class="col-5">
-            <h2 id="process-heading">How it works</h2>
-            <p class="body-large">One scoping call, read-only access for an agreed window, and a readout call when the report is ready. Everything else happens in writing.</p>
-          </div>
-          <div class="col-7">
-            <ol class="steps-ledger">
-              <li class="step-row">
-                <span class="step-num">01</span>
-                <span class="step-text">Scope call, 20 min</span>
-              </li>
-              <li class="step-row">
-                <span class="step-num">02</span>
-                <span class="step-text">Read-only, time-boxed access</span>
-              </li>
-              <li class="step-row">
-                <span class="step-num">03</span>
-                <span class="step-text">Review: scanners plus Principal validation</span>
-              </li>
-              <li class="step-row">
-                <span class="step-num">04</span>
-                <span class="step-text">Report and readout call</span>
-              </li>
-            </ol>
-          </div>
+        <div id="access" class="access">
+          <h2>Access and data</h2>
+          <ul class="checks">
+            <li>Read-only access only. We never write to production.</li>
+            <li>Time-boxed credentials, revoked when the audit ends.</li>
+            <li>NDA and DPA signed before we get any access.</li>
+            <li>Audit data is stored encrypted in the EU and deleted within 30 days after delivery.</li>
+            <li>We don't send your data to third-party AI services without your written consent.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- 8. Pricing + guarantees (#pricing, #guarantees) -->
-    <section class="section" id="pricing" aria-labelledby="pricing-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 08</span>
-          <span class="sec-label">FEE SCHEDULE &amp; GUARANTEES</span>
+    <!-- 7 · Pricing + guarantees + after -->
+    <section class="band band-surface" id="pricing" aria-labelledby="pricing-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="pricing-h">Fixed price, agreed before we start</h2>
+          <p class="body-lg">Start a fix package within 30 days and 100% of the audit fee goes towards it.</p>
         </div>
-        <h2 id="pricing-heading" class="section-heading-spaced">Fixed price, agreed before we start</h2>
 
-        <div class="table-scroll" role="region" aria-labelledby="pricing-heading" tabindex="0">
-          <table class="ledger-table">
-            <thead>
-              <tr>
-                <th scope="col">Tier</th>
-                <th scope="col">Typical scope</th>
-                <th scope="col">Report in</th>
-                <th scope="col">Price</th>
-                <th scope="col">Pick this if</th>
-              </tr>
-            </thead>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Pricing tiers, scrollable">
+          <table class="ledger">
+            <thead><tr><th scope="col">Tier</th><th scope="col">Typical scope</th><th scope="col">Report in</th><th scope="col">Price</th><th scope="col">Pick this if</th></tr></thead>
             <tbody>
-              <tr>
-                <th scope="row" class="tier-cell">Starter</th>
-                <td>1 cluster, up to ~20 services; Kubernetes, GitOps, secrets, backups</td>
-                <td class="mono-cell">~5 business days</td>
-                <td class="price-cell"><span class="price-val">from €2,500</span></td>
-                <td>you run one production cluster and want a clear fix list</td>
-              </tr>
-              <tr>
-                <th scope="row" class="tier-cell">Growth <span class="tier-tag">Recommended for DORA/NIS2</span></th>
-                <td>Several clusters or environments; Terraform; database replication; DR and a restore test</td>
-                <td class="mono-cell">~2 weeks</td>
-                <td class="price-cell"><span class="price-val">from €4,000</span></td>
-                <td>you need evidence for DORA or NIS2</td>
-              </tr>
-              <tr>
-                <th scope="row" class="tier-cell">Enterprise</th>
-                <td>Multi-region or multiple data centres; compliance mapping; AI agents add-on</td>
-                <td class="mono-cell">agreed at scoping</td>
-                <td class="price-cell"><span class="price-val">custom</span></td>
-                <td>you run multi-region data or your own data centres</td>
-              </tr>
+              <tr><th scope="row">Starter</th><td>1 cluster, up to ~20 services; Kubernetes, GitOps, secrets, backups</td><td class="num">~5 business days</td><td><span class="price price-lg">from €2,500</span></td><td>you run one production cluster and want a clear fix list</td></tr>
+              <tr class="recommended"><th scope="row">Growth <span class="rec-tag">Recommended for DORA/NIS2</span></th><td>Several clusters or environments; Terraform; database replication; DR and a restore test</td><td class="num">~2 weeks</td><td><span class="price price-lg">from €4,000</span></td><td>you need evidence for DORA or NIS2</td></tr>
+              <tr><th scope="row">Enterprise</th><td>Multi-region or multiple data centres; compliance mapping; AI agents add-on</td><td class="num">agreed at scoping</td><td><span class="price price-lg">custom</span></td><td>you run multi-region data or your own data centres</td></tr>
             </tbody>
           </table>
         </div>
+        <p class="note">Scope and timelines are indicative. We confirm both in writing before we start.</p>
 
-        <p class="ledger-footnote">Scope and timelines are indicative. We confirm both in writing before we start.</p>
-        
-        <div class="credit-banner">
-          <p class="credit-line">Start a fix package within 30 days and 100% of the audit fee goes towards it.</p>
-          <a href="#book" class="btn-primary" data-placeholder="booking-link">Book a 20-minute call</a>
-        </div>
-
-        <!-- Sub-block id="guarantees" -->
-        <div id="guarantees" class="guarantees-subblock">
-          <div class="subblock-header">
-            <span class="sec-num">§ 08.1</span>
-            <h3>Three guarantees, in writing</h3>
+        <div class="guarantees" id="guarantees">
+          <h3>Three guarantees, in writing</h3>
+          <div class="g-grid">
+            <p><strong>At least 5 validated findings, or a full refund.</strong> Growth: at least 8. You keep the report.</p>
+            <p><strong>A fixed date in writing.</strong> If the report is late, you pay 20% less. On fix packages, a missed deadline means the last week is on us.</p>
+            <p><strong>Fixes that hold.</strong> We re-check our fixes at day 30 for free and redo any that fail within 60 days.</p>
           </div>
-          <ul class="guarantees-list">
-            <li>
-              <strong>At least 5 validated findings, or a full refund.</strong> Growth: at least 8. You keep the report.
-            </li>
-            <li>
-              <strong>A fixed date in writing.</strong> If the report is late, you pay 20% less. On fix packages, a missed deadline means the last week is on us.
-            </li>
-            <li>
-              <strong>Fixes that hold.</strong> We re-check our fixes at day 30 for free and redo any that fail within 60 days.
-            </li>
-          </ul>
-
-          <details class="terms-details">
+          <details class="terms">
             <summary>Terms</summary>
-            <div class="details-body">
-              <p>A finding counts if it is confirmed on your infrastructure, has a priority (P0–P2), a fix and an effort estimate; duplicates and cosmetic issues don't count. Refund claims in writing within 14 days of the readout. Scoped access must be provided within 5 business days of kickoff. Delivery dates start when access is granted and kickoff has happened; delays on your side move the date. The fix warranty covers fixes we delivered, not later changes by you or third parties, new CVEs or provider changes. Enterprise scope: guarantees agreed individually.</p>
-            </div>
+            <p>A finding counts if it is confirmed on your infrastructure, has a priority (P0–P2), a fix and an effort estimate; duplicates and cosmetic issues don't count. Refund claims in writing within 14 days of the readout. Scoped access must be provided within 5 business days of kickoff. Delivery dates start when access is granted and kickoff has happened; delays on your side move the date. The fix warranty covers fixes we delivered, not later changes by you or third parties, new CVEs or provider changes. Enterprise scope: guarantees agreed individually.</p>
           </details>
         </div>
-      </div>
-    </section>
 
-    <!-- 9. After the audit (#after) -->
-    <section class="section" id="after" aria-labelledby="after-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 09</span>
-          <span class="sec-label">REMEDIATION OPTIONS</span>
+        <div class="after" id="after">
+          <h3>Fix it yourself, or with us</h3>
+          <p>Every finding in the report has an effort estimate for your team and a fixed price for ours.</p>
+          <ul class="after-list">
+            <li><strong>Do it in-house.</strong> The report is written so your team can act on it alone.</li>
+            <li><strong>Quick Wins.</strong> The top 5 fixes, <span class="price">€3,000–6,000</span>.</li>
+            <li><strong>Fix packages and ongoing support.</strong> Ask us.</li>
+          </ul>
         </div>
-        <div class="grid-12">
-          <div class="col-5">
-            <h2 id="after-heading">Fix it yourself, or with us</h2>
-            <p class="body-large">Every finding in the report has an effort estimate for your team and a fixed price for ours.</p>
-          </div>
-          <div class="col-7">
-            <div class="after-rows">
-              <div class="after-row">
-                <span class="after-index">01</span>
-                <p class="after-text"><strong>Do it in-house</strong> (the report is written so your team can act on it alone)</p>
-              </div>
-              <div class="after-row">
-                <span class="after-index">02</span>
-                <p class="after-text"><strong>Quick Wins:</strong> the top 5 fixes, <span class="price-val">€3,000–6,000</span></p>
-              </div>
-              <div class="after-row">
-                <span class="after-index">03</span>
-                <p class="after-text"><strong>Fix packages, and ongoing support:</strong> ask us.</p>
-              </div>
-            </div>
-          </div>
+
+        <div class="cta-row">
+          <a href="#book" class="btn" data-placeholder="booking-link">Book a 20-minute call</a>
         </div>
       </div>
     </section>
 
-    <!-- 10. Access & data (#access) -->
-    <section class="section" id="access" aria-labelledby="access-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 10</span>
-          <span class="sec-label">SECURITY &amp; DATA HANDLING</span>
-        </div>
-        <div class="grid-12">
-          <div class="col-4">
-            <h2 id="access-heading">Access and data</h2>
-          </div>
-          <div class="col-8">
-            <ul class="dossier-list">
-              <li>
-                <span class="list-index">01</span>
-                <span class="list-text">Read-only access only. We never write to production.</span>
-              </li>
-              <li>
-                <span class="list-index">02</span>
-                <span class="list-text">Time-boxed credentials, revoked when the audit ends.</span>
-              </li>
-              <li>
-                <span class="list-index">03</span>
-                <span class="list-text">NDA and DPA signed before we get any access.</span>
-              </li>
-              <li>
-                <span class="list-index">04</span>
-                <span class="list-text">Audit data is stored encrypted in the EU and deleted within 30 days after delivery.</span>
-              </li>
-              <li>
-                <span class="list-index">05</span>
-                <span class="list-text">We don't send your data to third-party AI services without your written consent.</span>
-              </li>
-            </ul>
-          </div>
+    <!-- 8 · FAQ -->
+    <section class="band" id="faq" aria-labelledby="faq-h">
+      <div class="wrap narrow">
+        <h2 id="faq-h">Questions CTOs ask us</h2>
+        <div class="faq">
+          <details><summary>What happens on the 20-minute call?</summary><p>You walk us through your setup and what made you get in touch. Volodymyr asks the technical questions. We tell you which tier fits, or that you don't need an audit, and send a fixed quote in writing after the call. There's no pitch deck.</p></details>
+          <details><summary>What access do you need?</summary><p>Read-only, time-boxed access to the clusters, repositories and cloud accounts in scope. Credentials are revoked when we finish.</p></details>
+          <details><summary>Do you work with Argo CD?</summary><p>Yes. We're Flux-first, and we audit Argo CD setups too.</p></details>
+          <details><summary>Who are you?</summary><p><span data-name>[NAME]</span> OÜ, a company registered in Estonia. Our engineering team is Ukrainian.</p></details>
+          <details><summary>Will the Principal engineer be on the call?</summary><p>Yes. Volodymyr joins the 20-minute call.</p></details>
+          <details><summary>What if we only want the report?</summary><p>That's fine. The report is written so your team can act on it alone.</p></details>
         </div>
       </div>
     </section>
 
-    <!-- 11. FAQ + final CTA (#faq) -->
-    <section class="section" id="faq" aria-labelledby="faq-heading">
-      <div class="container">
-        <div class="section-meta">
-          <span class="sec-num">§ 11</span>
-          <span class="sec-label">FREQUENTLY ASKED QUESTIONS</span>
+    <!-- Final CTA (ink) -->
+    <section class="final" id="book" aria-labelledby="final-h">
+      <div class="wrap final-grid">
+        <div>
+          <h2 id="final-h">Find out what your platform needs, and what it costs</h2>
+          <div class="cta-row">
+            <a href="#book" class="btn" data-placeholder="booking-link">Book a 20-minute call</a>
+          </div>
+          <p class="micro">20 minutes with Oleksii and Volodymyr. We listen to your setup, suggest a tier and send a fixed quote. No pitch deck.</p>
         </div>
-        <div class="grid-12">
-          <div class="col-4">
-            <h2 id="faq-heading">FAQ</h2>
-          </div>
-          <div class="col-8">
-            <div class="faq-accordion">
-              <details class="faq-item">
-                <summary>What happens on the 20-minute call?</summary>
-                <div class="details-body">
-                  <p>You walk us through your setup and what made you get in touch. Volodymyr asks the technical questions. We tell you which tier fits, or that you don't need an audit, and send a fixed quote in writing after the call. There's no pitch deck.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>What access do you need?</summary>
-                <div class="details-body">
-                  <p>Read-only, time-boxed access to the clusters, repositories and cloud accounts in scope. Credentials are revoked when we finish.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>Do you work with Argo CD?</summary>
-                <div class="details-body">
-                  <p>Yes. We're Flux-first, and we audit Argo CD setups too.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>Who are you?</summary>
-                <div class="details-body">
-                  <p><span data-name>[NAME]</span> OÜ, a company registered in Estonia. Our engineering team is Ukrainian.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>Will the Principal engineer be on the call?</summary>
-                <div class="details-body">
-                  <p>Yes. Volodymyr joins the 20-minute call.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>What if we only want the report?</summary>
-                <div class="details-body">
-                  <p>That's fine. The report is written so your team can act on it alone.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </div>
-
-        <div class="final-cta-block" id="book">
-          <div class="section-meta">
-            <span class="sec-num">§ 12</span>
-            <span class="sec-label">NEXT STEP</span>
-          </div>
-          <h2>Find out what your platform needs, and what it costs</h2>
-          <div class="cta-group">
-            <a href="#book" class="btn-primary" data-placeholder="booking-link">Book a 20-minute call</a>
-            <p class="microcopy">20 minutes with Oleksii and Volodymyr. We listen to your setup, suggest a tier and send a fixed quote. No pitch deck.</p>
-          </div>
+        <div class="company">
+          <p class="company-title">EU company</p>
+          <dl>
+            <div><dt>Legal entity</dt><dd><span data-name>[NAME]</span> OÜ, Estonia</dd></div>
+            <div><dt>Registry code</dt><dd class="tbd">[Registry code]</dd></div>
+            <div><dt>Address</dt><dd class="tbd">[Address], Estonia</dd></div>
+            <div><dt>Email</dt><dd class="tbd">[Email]</dd></div>
+            <div><dt>Team</dt><dd>Ukrainian engineering team</dd></div>
+          </dl>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-legal">
-        <span class="footer-entity"><span data-name>[NAME]</span> OÜ</span>
-        <span class="dot-sep">·</span>
-        <span>Registry code: <span class="placeholder placeholder-inline">[REGISTRY CODE]</span></span>
-        <span class="dot-sep">·</span>
-        <span>Address: <span class="placeholder placeholder-inline">[ADDRESS]</span>, Estonia</span>
-        <span class="dot-sep">·</span>
-        <span><span class="placeholder placeholder-inline">[EMAIL]</span></span>
-      </div>
-      <nav class="footer-links" aria-label="Legal links">
-        <a href="#" class="placeholder placeholder-inline">Imprint</a>
-        <span class="dot-sep">·</span>
-        <a href="#" class="placeholder placeholder-inline">Privacy</a>
-        <span class="dot-sep">·</span>
-        <a href="#" class="placeholder placeholder-inline">DPA</a>
+    <div class="wrap footer-inner">
+      <span><span data-name>[NAME]</span> OÜ</span>
+      <nav aria-label="Legal">
+        <a href="#" data-placeholder="imprint">Imprint</a>
+        <a href="#" data-placeholder="privacy">Privacy</a>
+        <a href="#" data-placeholder="dpa">DPA</a>
       </nav>
     </div>
   </footer>
 
-  <!-- Sticky bottom CTA bar on mobile only -->
-  <div class="mobile-sticky-bar" role="region" aria-label="Mobile quick booking">
+  <div class="mobile-bar" role="region" aria-label="Quick actions">
     <a href="#pricing" class="mobile-bar-link">Pricing</a>
-    <a href="#book" class="btn-primary btn-small" data-placeholder="booking-link">Book a 20-minute call</a>
+    <a href="#book" class="btn btn-sm" data-placeholder="booking-link">Book a 20-minute call</a>
   </div>
 </body>
 </html>
