@@ -279,3 +279,14 @@ figcaption { font-size: .875rem; color: var(--muted); margin-top: .9rem; }
 }
 .ledger .num { white-space: nowrap; }
 .finding-head .num { font-size: .9375rem; color: var(--muted); }
+
+/* Wide screens: use more of the width, keep text measure */
+@media (min-width: 1680px) {
+  :root { --wrap: 1520px; --fs-body: 1.1875rem; --fs-lg: 1.3125rem; --fs-h1: clamp(4.25rem, 3.6vw, 5rem); --fs-h2: clamp(3rem, 2.6vw, 3.5rem); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .hero { padding-top: 5rem; }
+  .report { max-width: 1240px; }
+  .section-head { max-width: 52rem; }
+  .body-lg { max-width: 44rem; }
+  .split-statement { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+}
