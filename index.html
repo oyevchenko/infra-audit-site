@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SnowBall Labs · Principal-led infrastructure audit, every fix priced</title>
-  <meta name="description" content="Kubernetes, GitOps, Terraform and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
+  <title>Snowball Lab · Principal-led infrastructure audit, every fix priced</title>
+  <meta name="description" content="Kubernetes, GitOps and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
   <!-- Canonical/OG URLs point to the GitHub Pages URL. Change all https://oyevchenko.github.io/infra-audit-site/ occurrences when the real domain exists. -->
   <link rel="canonical" href="https://oyevchenko.github.io/infra-audit-site/">
   <meta name="theme-color" content="#0E1116">
@@ -12,17 +12,17 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="SnowBall Labs">
+  <meta property="og:site_name" content="Snowball Lab">
   <meta property="og:url" content="https://oyevchenko.github.io/infra-audit-site/">
-  <meta property="og:title" content="SnowBall Labs · Principal-led infrastructure audit, every fix priced">
-  <meta property="og:description" content="Kubernetes, GitOps, Terraform and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
+  <meta property="og:title" content="Snowball Lab · Principal-led infrastructure audit, every fix priced">
+  <meta property="og:description" content="Kubernetes, GitOps and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
   <meta property="og:image" content="https://oyevchenko.github.io/infra-audit-site/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="An infrastructure audit where every finding has a price.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SnowBall Labs · Principal-led infrastructure audit, every fix priced">
-  <meta name="twitter:description" content="Kubernetes, GitOps, Terraform and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
+  <meta name="twitter:title" content="Snowball Lab · Principal-led infrastructure audit, every fix priced">
+  <meta name="twitter:description" content="Kubernetes, GitOps and database DR audit by a Principal engineer. Fixed price, fixed date, a price on every finding.">
   <meta name="twitter:image" content="https://oyevchenko.github.io/infra-audit-site/og-image.png">
   <link rel="preload" href="fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ibm-plex-sans-600.woff2" as="font" type="font/woff2" crossorigin>
@@ -33,7 +33,7 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="#top" class="wordmark" aria-label="SnowBall Labs, home"><span class="wm-a">SnowBall</span> <span class="wm-b">Labs</span></a>
+      <a href="#top" class="wordmark" aria-label="Snowball Lab, home"><span class="wm-a">Snowball</span> <span class="wm-b">Lab</span></a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#report">Report</a>
         <a href="#scope">Scope</a>
@@ -209,7 +209,6 @@
         </div>
         <ol class="pipeline" aria-label="What we audit, in order">
           <li><strong>Git &amp; Flux</strong><span>Flux-first, Argo CD supported</span></li>
-          <li><strong>Terraform &amp; state</strong></li>
           <li><strong>Kubernetes &amp; custom operators</strong></li>
           <li><strong>Secrets &amp; access</strong></li>
           <li><strong>Postgres / MongoDB replication</strong></li>
@@ -283,7 +282,7 @@
             <thead><tr><th scope="col">Tier</th><th scope="col">Typical scope</th><th scope="col">Report in</th><th scope="col">Price</th><th scope="col">Pick this if</th></tr></thead>
             <tbody>
               <tr><th scope="row">Starter</th><td>1 cluster, up to ~20 services; Kubernetes, GitOps, secrets, backups</td><td class="num">~5 business days</td><td><span class="price price-lg">from €2,500</span></td><td>you run one production cluster and want a clear fix list</td></tr>
-              <tr class="recommended"><th scope="row">Growth <span class="rec-tag">Recommended for DORA/NIS2</span></th><td>Several clusters or environments; Terraform; database replication; DR and a restore test</td><td class="num">~2 weeks</td><td><span class="price price-lg">from €4,000</span></td><td>you need evidence for DORA or NIS2</td></tr>
+              <tr class="recommended"><th scope="row">Growth <span class="rec-tag">Recommended for DORA/NIS2</span></th><td>Several clusters or environments; database replication; DR and a restore test</td><td class="num">~2 weeks</td><td><span class="price price-lg">from €4,000</span></td><td>you need evidence for DORA or NIS2</td></tr>
               <tr><th scope="row">Enterprise</th><td>Multi-region or multiple data centres; compliance mapping; AI agents add-on</td><td class="num">agreed at scoping</td><td><span class="price price-lg">custom</span></td><td>you run multi-region data or your own data centres</td></tr>
             </tbody>
           </table>
@@ -327,7 +326,7 @@
           <details><summary>What happens on the 20-minute call?</summary><p>You walk us through your setup and what made you get in touch. Volodymyr asks the technical questions. We tell you which tier fits, or that you don't need an audit, and send a fixed quote in writing after the call. There's no pitch deck.</p></details>
           <details><summary>What access do you need?</summary><p>Read-only, time-boxed access to the clusters, repositories and cloud accounts in scope. Credentials are revoked when we finish.</p></details>
           <details><summary>Do you work with Argo CD?</summary><p>Yes. We're Flux-first, and we audit Argo CD setups too.</p></details>
-          <details><summary>Who are you?</summary><p><span data-name>SnowBall Labs</span> is a two-person practice. Volodymyr does the technical work and is the only one who touches your systems and data. Oleksii handles scope, contracts and invoicing. Full legal details are on every quote and invoice.</p></details>
+          <details><summary>Who are you?</summary><p><span data-name>Snowball Lab</span> is a two-person practice. Volodymyr does the technical work and is the only one who touches your systems and data. Oleksii handles scope, contracts and invoicing. Full legal details are on every quote and invoice.</p></details>
           <details><summary>Will the Principal engineer be on the call?</summary><p>Yes. Volodymyr joins the 20-minute call.</p></details>
           <details><summary>What if we only want the report?</summary><p>That's fine. The report is written so your team can act on it alone.</p></details>
         </div>
@@ -359,7 +358,7 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span><span data-name>SnowBall Labs</span> · <span class="tbd-foot">[Legal details]</span></span>
+      <span><span data-name>Snowball Lab</span> · <span class="tbd-foot">[Legal details]</span></span>
       <nav aria-label="Legal">
         <a href="#" data-placeholder="imprint">Imprint</a>
         <a href="#" data-placeholder="privacy">Privacy</a>
