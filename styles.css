@@ -292,3 +292,4 @@ figcaption { font-size: .875rem; color: var(--muted); margin-top: .9rem; }
   .body-lg { max-width: 44rem; }
   .split-statement { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
 }
+.tbd-foot { color: var(--on-ink-muted); }
